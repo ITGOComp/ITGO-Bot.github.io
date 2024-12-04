@@ -30,8 +30,3 @@ document.getElementById("email-link").addEventListener("click", function(event) 
 function isMobileDevice() {
     return /Mobi|Android/i.test(navigator.userAgent);
 }
-
-// Определяем, открывается ли сайт через Telegram
-if (navigator.userAgent.toLowerCase().indexOf('telegram') > -1) {
-    alert('Сайт открыт через Telegram. Некоторые функции могут быть недоступны.');
-}
