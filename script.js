@@ -19,7 +19,7 @@ document.getElementById("email-link").addEventListener("click", function(event) 
     event.preventDefault();
 
     if (isMobileDevice()) {
-        // Для мобильных устройств только email
+        // Для мобильных устройств только email (без темы и тела письма)
         window.location.href = "mailto:ITGOcomp@yandex.ru";
     } else {
         // Для компьютеров передаем параметры (тема и тело письма)
