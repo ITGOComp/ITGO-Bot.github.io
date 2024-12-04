@@ -19,10 +19,10 @@ document.getElementById("email-link").addEventListener("click", function(event) 
     event.preventDefault();
 
     if (isMobileDevice()) {
-        // Для мобильных устройств откроется почтовое приложение
-        window.location.href = "mailto:ITGOcomp@yandex.ru?subject=Запрос&body=Текст%20сообщения";
+        // Для мобильных устройств только email
+        window.location.href = "mailto:ITGOcomp@yandex.ru";
     } else {
-        // Для компьютеров откроется сайт Gmail с заранее заполненными полями
+        // Для компьютеров передаем параметры (тема и тело письма)
         window.open("https://mail.google.com/mail/?view=cm&fs=1&to=ITGOcomp@yandex.ru&su=Запрос&body=Текст%20сообщения", "_blank");
     }
 });
