@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Визитка</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ITGO</h1>
+            <p>Мы всегда рядом с вами!</p>
+        </div>
+    </header>
+
+    <main class="contact-section">
+        <div class="container">
+            <h2>Контактная информация</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Телефон</h3>
+                    <p><a href="tel:+70000000000">+7 (XXX) XXX XX-XX</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="#" id="email-link">ITGOcomp@yandex.ru</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Адрес</h3>
+                    <div id="map" style="width: 100%; height: 300px;"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ITGO. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
