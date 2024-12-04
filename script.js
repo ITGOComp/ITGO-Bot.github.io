@@ -19,14 +19,19 @@ document.getElementById("email-link").addEventListener("click", function(event) 
     event.preventDefault();
 
     if (isMobileDevice()) {
-        // Для мобильных устройств только email (без темы и тела письма)
-        window.location.href = "mailto:ITGOcomp@yandex.ru";
+        // Для мобильных устройств откроется почтовое приложение
+        window.location.href = "mailto:ITGOcomp@yandex.ru?subject=Запрос&body=Текст%20сообщения";
     } else {
-        // Для компьютеров передаем параметры (тема и тело письма)
+        // Для компьютеров откроется сайт Gmail с заранее заполненными полями
         window.open("https://mail.google.com/mail/?view=cm&fs=1&to=ITGOcomp@yandex.ru&su=Запрос&body=Текст%20сообщения", "_blank");
     }
 });
 
 function isMobileDevice() {
     return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+// Определяем, открывается ли сайт через Telegram
+if (navigator.userAgent.toLowerCase().indexOf('telegram') > -1) {
+    alert('Сайт открыт через Telegram. Некоторые функции могут быть недоступны.');
 }
