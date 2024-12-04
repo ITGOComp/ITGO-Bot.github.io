@@ -130,3 +130,24 @@ footer p {
         margin-bottom: 20px;
     }
 }
+
+.telegram-warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FF5722;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    z-index: 1000;
+    display: block;  /* Показываем текст */
+    animation: slideIn 5s linear infinite;  /* Бегущий текст */
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
