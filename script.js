@@ -19,10 +19,8 @@ document.getElementById("email-link").addEventListener("click", function(event) 
     event.preventDefault();
 
     if (isMobileDevice()) {
-        // Для мобильных устройств откроется почтовое приложение
         window.location.href = "mailto:ITGOcomp@yandex.ru?subject=Запрос&body=Текст%20сообщения";
     } else {
-        // Для компьютеров откроется сайт Gmail с заранее заполненными полями
         window.open("https://mail.google.com/mail/?view=cm&fs=1&to=ITGOcomp@yandex.ru&su=Запрос&body=Текст%20сообщения", "_blank");
     }
 });
@@ -34,6 +32,6 @@ function isMobileDevice() {
 window.onload = function() {
     var marquee = document.querySelector('marquee');
     if (!/Mobi|Android/i.test(navigator.userAgent)) {
-        marquee.style.display = 'none'; // Скрываем, если не мобильное устройство
+        marquee.style.display = 'none';
     }
 };
