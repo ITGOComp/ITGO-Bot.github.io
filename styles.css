@@ -12,20 +12,20 @@ body {
 }
 
 .mobile-marquee {
-    display: none; /* Скрываем элемент по умолчанию */
+    display: none;
 }
 
 @media (max-width: 768px) {
     .mobile-marquee {
-        display: block; /* Показываем на мобильных */
+        display: block;
     }
 }
 
 marquee {
-    background-color: transparent;  /* Убираем фон */
-    color: #B0B0B0;  /* Серый цвет текста */
-    padding: 0;  /* Убираем внутренние отступы */
-    margin: 0;  /* Убираем внешние отступы */
+    background-color: transparent;
+    color: #B0B0B0;
+    padding: 0;
+    margin: 0;
     font-size: 0.9em;
     font-weight: normal;
 }
@@ -149,50 +149,3 @@ footer p {
         margin-bottom: 20px;
     }
 }
-
-/* Стиль для бегущей строки */
-.marquee {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #007BFF; /* Такой же фон как у заголовка */
-    color: #B0B0B0; /* Серый цвет текста */
-    text-align: center;
-    padding: 5px 20px; /* Уменьшил отступы */
-    font-size: 0.9em; /* Уменьшенный размер шрифта */
-    font-weight: normal;
-    z-index: 1000;
-    overflow: hidden;
-}
-
-.marquee span {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee-animation 15s linear infinite;
-}
-
-/* Анимация для бегущей строки */
-@keyframes marquee-animation {
-    0% {
-        transform: translateX(100%); /* Начинаем с правой стороны */
-    }
-    100% {
-        transform: translateX(-100%); /* Заканчиваем с левой стороны, выходя за пределы */
-    }
-}
-
-/* Для карты */
-#map {
-    width: 100%;
-    height: 300px;
-}
-
-/* Общие стили */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Убираем отступы у бегущей строки */
