@@ -30,3 +30,10 @@ document.getElementById("email-link").addEventListener("click", function(event) 
 function isMobileDevice() {
     return /Mobi|Android/i.test(navigator.userAgent);
 }
+
+window.onload = function() {
+    var marquee = document.querySelector('marquee');
+    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+        marquee.style.display = 'none'; // Скрываем, если не мобильное устройство
+    }
+};
