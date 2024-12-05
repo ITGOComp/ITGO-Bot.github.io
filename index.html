@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Визитка</title>
+    <title>Бегущая строка текста в HTML</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>  <!-- Подключаем JavaScript -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
-    <!-- Бегущий текст -->
-    <div id="telegram-warning" class="telegram-warning">
-        Внимание! Сайт открыт через Telegram. Некоторые функции могут быть недоступны.
-    </div>
 
     <header>
+        <marquee class="mobile-marquee" behavior="scroll" direction="left" scrollamount="10" loop="10">
+            Если ссылка была открыта через браузер телеграмм, то часть функций может не работать!
+        </marquee>
         <div class="container">
             <h1>ITGO</h1>
             <p>Мы всегда рядом с вами!</p>
@@ -36,7 +34,7 @@
                 </div>
                 <div class="contact-item">
                     <h3>Адрес</h3>
-                    <div id="map" style="width: 100%; height: 300px;"></div>
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
@@ -47,5 +45,7 @@
             <p>&copy; 2024 ITGO. Все права защищены.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
